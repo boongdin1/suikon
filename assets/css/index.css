@@ -3029,9 +3029,11 @@ body.yt-open { overflow: hidden; }
     font-size: 12px;
     line-height: 1.35;
   }
-  #footer .f_info .flex_box { gap: 4px 12px; row-gap: 4px; }
-  #footer .f_info .flex_box p { margin: 0; padding: 1px 0; }
-  #footer .f_info .mt-10 { margin-top: 6px !important; }
+  #footer .f_info .flex_box { gap: 0 12px; row-gap: 0; margin: 0; }
+  #footer .f_info .flex_box p { margin: 0; padding: 0; }
+  #footer .f_info .mt-10 { margin-top: 2px !important; }
+  #footer .f_info p { margin: 0; }
+  #footer .f_info > * + * { margin-top: 2px; }
 
   /* cert modal */
   .cert-modal__panel { width: 94vw; }

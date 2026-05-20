@@ -3017,8 +3017,18 @@ body.yt-open { overflow: hidden; }
   /* footer */
   #footer .footer { padding: 36px 18px; }
   #footer .footer_logo img { max-width: 140px; }
-  #footer .copyright { text-align: center; }
-  #footer .f_info { font-size: 12px; line-height: 1.6; }
+  #footer .copyright,
+  #footer .copyright * { text-align: left; }
+  #footer .footer_menu ul { justify-content: flex-start; }
+  #footer .f_info,
+  #footer .f_info .flex_box,
+  #footer .f_info .flex_box p,
+  #footer .f_info span {
+    text-align: left;
+    justify-content: flex-start;
+    font-size: 12px;
+    line-height: 1.6;
+  }
 
   /* cert modal */
   .cert-modal__panel { width: 94vw; }

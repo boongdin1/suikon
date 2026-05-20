@@ -3169,3 +3169,9 @@ body.yt-open { overflow: hidden; }
       linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.85) 100%);
   }
 }
+
+/* 모바일 전용 줄바꿈 */
+.br-mobile { display: none; }
+@media (max-width: 640px) {
+  .br-mobile { display: inline; }
+}

@@ -2042,7 +2042,7 @@ body.trial-open { overflow: hidden; }
   background:
     linear-gradient(180deg, rgba(5, 7, 13, 0.78) 0%, rgba(5, 7, 13, 0.58) 50%, rgba(5, 7, 13, 0.92) 100%),
     radial-gradient(ellipse 60% 70% at 30% 50%, rgba(255, 122, 26, 0.22) 0%, transparent 65%),
-    url("/assets/images/contact_bg.webp") center/cover no-repeat,
+    url("assets/images/contact_bg.webp") center/cover no-repeat,
     #05070d;
 }
 .sec-quick .quick-list {

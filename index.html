@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="generator" content="Rhymix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="csrf-token" content="Sx9SzxkYIYat5gGB">
+    <meta name="keywords" content="수익온, 자동매매, 코인 자동매매, 주식 자동매매, 알고리즘 트레이딩">
+    <meta name="description" content="수익온 — 스마트 자동매매 시스템. 실시간 데이터 분석부터 자동 실행까지, 검증된 알고리즘으로 안정적인 자동화 운용을 제공합니다.">
+    <meta name="theme-color" content="#000000">
+
+    <!-- TITLE -->
+    <title>수익온 | 스마트 자동매매 시스템</title>
+
+    <!-- ICONS AND OTHER LINKS -->
+    <link rel="canonical" href="">
+    <link rel="shortcut icon" href="">
+
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <!-- PLUGIN CSS -->
+    <!-- 본문/강조: Pretendard Variable + 영문 액센트: Space Grotesk -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/aos.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+    <!-- PLUGIN JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="/assets/js/aos.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+    <script src="/assets/js/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/ScrollToPlugin.min.js"></script>
+    <script src="/assets/js/ScrollMagic.min.js"></script>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    <!-- 인트로 영상 (임시 숨김)
+    <div id="intro-overlay">
+        <video id="intro-video" autoplay muted playsinline preload="auto">
+            <source src="/assets/videos/intro.mp4" type="video/mp4">
+        </video>
+    </div>
+    -->
+
+
+    <div id="wrap">
+        <!-- 헤더 -->
+        <header id="header">
+            <div class="header-inner">
+                <h1 class="logo">
+                    <a href="/" aria-label="수익온 홈">
+                        <img src="/assets/images/logo.svg" alt="수익온">
+                    </a>
+                </h1>
+                <nav class="gnb" aria-label="주 메뉴">
+                    <ul class="gnb-list">
+                        <li class="gnb-item has-sub">
+                            <a href="#about">회사소개</a>
+                            <ul class="sub">
+                                <li><a href="/company/greeting">인사말</a></li>
+                                <li><a href="/company/vision">비전</a></li>
+                                <li><a href="#certificates">인증내역</a></li>
+                                <li><a href="/company/location">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item has-sub">
+                            <a href="#products">서비스</a>
+                            <ul class="sub">
+                                <li><a href="/service/coin">코인 프로그램</a></li>
+                                <li><a href="/service/stock">주식 프로그램</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item has-sub">
+                            <a href="/support">고객지원</a>
+                            <ul class="sub">
+                                <li><a href="/support/inquiry">안내 및 문의</a></li>
+                                <li><a href="/support/notice">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item has-sub">
+                            <a href="#news">커뮤니티</a>
+                            <ul class="sub">
+                                <li><a href="/community/news">수익온 뉴스</a></li>
+                                <li><a href="https://www.youtube.com/@oruda_corp1" target="_blank" rel="noopener">유튜브</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item"><a href="#trial">무료체험신청</a></li>
+                        <li class="gnb-item"><a href="/remote">원격지원</a></li>
+                        <li class="gnb-item"><a href="/partnership">제휴문의</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="https://pf.kakao.com/_xbiPWxj/chat" target="_blank" rel="noopener" class="btn-kakao" aria-label="카카오톡 채널 상담">
+                        <i class="ri-kakao-talk-fill" aria-hidden="true"></i>
+                        <span>카톡상담</span>
+                    </a>
+                    <a href="tel:1551-2574" class="btn-call" aria-label="전화 상담 1551-2574">
+                        <i class="ri-phone-fill" aria-hidden="true"></i>
+                        <span>1551-2574</span>
+                    </a>
+                </div>
+                <button type="button" class="hamburger" aria-label="메뉴 열기" aria-controls="mobile-menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- 모바일 메뉴 -->
+        <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+            <ul class="m-list">
+                <li class="m-has-sub">
+                    <button type="button" class="m-toggle" aria-expanded="false">회사소개<i class="ri-arrow-down-s-line" aria-hidden="true"></i></button>
+                    <ul class="m-sub">
+                        <li><a href="/company/greeting">인사말</a></li>
+                        <li><a href="/company/vision">비전</a></li>
+                        <li><a href="#certificates">인증내역</a></li>
+                        <li><a href="/company/location">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="m-has-sub">
+                    <button type="button" class="m-toggle" aria-expanded="false">서비스<i class="ri-arrow-down-s-line" aria-hidden="true"></i></button>
+                    <ul class="m-sub">
+                        <li><a href="/service/coin">코인 프로그램</a></li>
+                        <li><a href="/service/stock">주식 프로그램</a></li>
+                    </ul>
+                </li>
+                <li class="m-has-sub">
+                    <button type="button" class="m-toggle" aria-expanded="false">고객지원<i class="ri-arrow-down-s-line" aria-hidden="true"></i></button>
+                    <ul class="m-sub">
+                        <li><a href="/support/inquiry">안내 및 문의</a></li>
+                        <li><a href="/support/notice">공지사항</a></li>
+                    </ul>
+                </li>
+                <li class="m-has-sub">
+                    <button type="button" class="m-toggle" aria-expanded="false">커뮤니티<i class="ri-arrow-down-s-line" aria-hidden="true"></i></button>
+                    <ul class="m-sub">
+                        <li><a href="/community/news">수익온 뉴스</a></li>
+                        <li><a href="https://www.youtube.com/@oruda_corp1" target="_blank" rel="noopener">유튜브</a></li>
+                    </ul>
+                </li>
+                <li><a href="#trial">무료체험신청</a></li>
+                <li><a href="/remote">원격지원</a></li>
+                <li><a href="/partnership">제휴문의</a></li>
+            </ul>
+            <div class="m-cta">
+                <a href="https://pf.kakao.com/_xbiPWxj/chat" target="_blank" rel="noopener" class="btn-kakao">
+                    <i class="ri-kakao-talk-fill" aria-hidden="true"></i>카톡상담
+                </a>
+                <a href="tel:1551-2574" class="btn-call">
+                    <i class="ri-phone-fill" aria-hidden="true"></i>1551-2574
+                </a>
+            </div>
+        </nav>
+        <div class="menu-dim" aria-hidden="true"></div>
+
+        <section id="container">
+            <main id="main">
+                <section id="hero">
+                    <div class="hero-sticky">
+                        <div class="bg">
+                            <video autoplay muted playsinline loop preload="metadata" poster="/assets/images/placeholder.jpg">
+                                <source src="/assets/videos/hero.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="hero-mask" aria-hidden="true"></div>
+                        <div class="hero-deco" aria-hidden="true">
+                            <span class="hero-orb hero-orb--main"></span>
+                            <span class="hero-orb hero-orb--sub"></span>
+                            <span class="hero-orb hero-orb--accent"></span>
+                        </div>
+                        <div class="text inner">
+                            <img class="hero-logo" src="/assets/images/logo.svg" alt="수익온" data-aos="fade-up" data-aos-duration="900">
+                            <strong data-aos="fade-up" data-aos-duration="900" data-aos-delay="250">잠들지 않는 시장,<br>멈추지 않는 <em>수익</em></strong>
+                            <p data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">자동매매의 새로운 기준 <em>수익온</em></p>
+                            <div class="hero-cta" data-aos="fade-up" data-aos-duration="900" data-aos-delay="900">
+                                <a href="#trial" class="btn-primary" data-trial-open>
+                                    무료체험 신청하기
+                                    <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION-01 회사소개 (sticky scroll) -->
+                <section class="section-01 sec-about" id="about">
+                    <div class="sticky">
+                        <div class="section-bg" aria-hidden="true">
+                            <video data-src="/assets/videos/about_bg.mp4" autoplay loop muted playsinline preload="none" poster="/assets/images/placeholder.jpg"></video>
+                        </div>
+                        <div class="section-dim" aria-hidden="true"></div>
+                        <div class="section-title">
+                            <div class="inner">
+                                <div class="title-head">
+                                    <h6 class="eyebrow">ABOUT US</h6>
+                                    <h2 class="head-line">보이지 않는 곳에서 작동하는</h2>
+                                    <h2 class="head-line"><em>수익온</em>의 자동화 엔진</h2>
+                                </div>
+                                <div class="title-body">
+                                    <p>수익온 프로그램은 깊이 설계된 기술과 흐름에 반응하는 스마트 시스템을 통해<br>안정적이고 유연한 자동화를 제공합니다.</p>
+                                    <p>보이지 않는 곳에서 끊임없이 작동하는 엔진이<br>고객님께 최적의 솔루션을 제공하기 위해 노력합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-04">
+                    <div class="sticky">
+                        <div class="scene scene-01">
+                            <div class="left-section">
+                                <div class="title-wrap">
+                                    <span>PRODUCT INTRO <em>01</em></span>
+                                    <p>데이터 분석</p>
+                                </div>
+                                <div class="content-wrap">
+                                    <p>실시간 차트를 기반으로 변화의 흐름을 감지합니다.</p>
+                                    <ul>
+                                        <li>다중 시장의 시세·체결·호가 데이터를 초 단위로 수집하고 정규화합니다.</li>
+                                        <li>추세·변동성·거래량 신호를 결합한 다층 지표로 시장 상태를 판별합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-section">
+                                <video data-src="/assets/videos/section04_01.mp4" muted playsinline loop preload="none" poster="/assets/images/placeholder.jpg"></video>
+                            </div>
+                        </div>
+                        <div class="scene scene-02">
+                            <div class="left-section">
+                                <div class="title-wrap">
+                                    <span>PRODUCT INTRO <em>02</em></span>
+                                    <p>조건 기반 대응</p>
+                                </div>
+                                <div class="content-wrap">
+                                    <p>전략 로직에 따라 상황별 자동 대응이 이루어집니다.</p>
+                                    <ul>
+                                        <li>사전 정의된 진입·청산 규칙과 리스크 한도에 따라 주문을 자동 집행합니다.</li>
+                                        <li>시장 변동·예외 상황에서도 손절·익절·분할매매 등 전략별 분기로 안정적으로 대응합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-section">
+                                <video data-src="/assets/videos/section04_02.mp4" muted playsinline loop preload="none" poster="/assets/images/placeholder.jpg"></video>
+                            </div>
+                        </div>
+                        <div class="scene scene-03">
+                            <div class="left-section">
+                                <div class="title-wrap">
+                                    <span>PRODUCT INTRO <em>03</em></span>
+                                    <p>자동 실행 시스템</p>
+                                </div>
+                                <div class="content-wrap">
+                                    <p>분석부터 실행까지 전 과정이 자동화된 구조로 운영됩니다.</p>
+                                    <ul>
+                                        <li>데이터 수집 → 신호 판단 → 주문 실행 → 결과 기록이 하나의 파이프라인으로 동작합니다.</li>
+                                        <li>365일 무중단 운용을 위한 모니터링·자동 복구 체계로 거래 누락 없이 작동합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-section">
+                                <video data-src="/assets/videos/section04_03.mp4" muted playsinline loop preload="none" poster="/assets/images/placeholder.jpg"></video>
+                            </div>
+                        </div>
+                        <div class="scene scene-04">
+                            <div class="left-section">
+                                <div class="title-wrap">
+                                    <span>PRODUCT INTRO <em>04</em></span>
+                                    <p>통합 시스템</p>
+                                </div>
+                                <div class="content-wrap">
+                                    <p>다양한 자산과 시장을 하나의 시스템으로 연결합니다. <br>현물과 선물을 아우르는 유연한 대응 구조와 다중 전략 기반의 자동화 운용을 구현합니다.</p>
+                                    <ul>
+                                        <li>실시간 데이터를 수집하고 구조적으로 분석합니다.</li>
+                                        <li>빅데이터 기반 백테스팅으로 전략을 검증합니다.</li>
+                                        <li>데이터 결과를 반영하여 지속적으로 업데이트됩니다.</li>
+                                        <li>시장 변화에 맞춰 자동으로 성능이 최적화됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-section">
+                                <video data-src="/assets/videos/section04_04.mp4" muted playsinline loop preload="none" poster="/assets/images/placeholder.jpg"></video>
+                            </div>
+                        </div>
+                        <div class="scene scene-05">
+                            <div class="left-section">
+                                <div class="title-wrap">
+                                    <span>PRODUCT INTRO <em>05</em></span>
+                                    <p>다양한 시장 지원</p>
+                                </div>
+                                <div class="content-wrap">
+                                    <p>암호화폐 및 주식 시장을 동시에 지원합니다.</p>
+                                    <ul>
+                                        <li>현물 및 선물 거래를 지원합니다.</li>
+                                        <li>업비트, 빗썸, 비트겟, OKX, 한국투자증권과 연계되어 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-section">
+                                <video data-src="/assets/videos/section04_05.mp4" muted playsinline loop preload="none" poster="/assets/images/placeholder.jpg"></video>
+                            </div>
+                        </div>
+                        <div class="scene scene-06">
+                            <div class="left-section">
+                                <div class="title-wrap">
+                                    <span>PRODUCT INTRO <em>06</em></span>
+                                    <p>다양한 전략 제공</p>
+                                </div>
+                                <div class="content-wrap">
+                                    <p>고객님께 최적의 거래 전략을 제공하기 위해 노력합니다.</p>
+                                    <ul>
+                                        <li>보수적 안정형부터 적극적 수익형까지, 투자 성향에 맞춰 자유롭게 선택·조합할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-section">
+                                <video data-src="/assets/videos/section04_06.mp4" muted playsinline loop preload="none" poster="/assets/images/placeholder.jpg"></video>
+                            </div>
+                        </div>
+                        <div class="numberProgress">
+                            <canvas id="numberProgress" width="512" height="62"></canvas>
+                        </div>
+                    </div>
+                </section>
+             
+                <section class="section-06">
+                    <div class="sticky">
+                        <div class="bg">
+                            <video data-src="/assets/videos/section_06_bg.mp4" autoplay muted playsinline loop preload="none"></video>
+                        </div>
+                        <div class="paths">
+                            <div class="path">
+                                <span></span>
+                            </div>
+                            <div class="path">
+                                <span></span>
+                            </div>
+                            <div class="path">
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="text">
+                                <div>
+                                    <span>성장의 지속성 및 전문성</span>
+                                    <span>사용자 중심의 차별성</span>
+                                    <span>신뢰와 공유의 가치</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="news" class="sec sec-news">
+                    <div class="inner">
+                        <div class="section-head" data-aos="fade-up">
+                            <span class="eyebrow">News</span>
+                            <strong class="section-title">수익온 소식</strong>
+                        </div>
+
+                        <!-- 뉴스 스와이퍼 -->
+                        <div class="news-block" data-aos="fade-up">
+                            <div class="block-head">
+                                <h3>언론 보도</h3>
+                                <div class="nav-btns">
+                                    <button type="button" class="btn-prev news-prev" aria-label="이전 뉴스">이전</button>
+                                    <button type="button" class="btn-next news-next" aria-label="다음 뉴스">다음</button>
+                                </div>
+                            </div>
+                            <div class="swiper news-slide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/158/003/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">스마트타임즈</span>
+                                                <span class="date">2025.05.07</span>
+                                                <strong class="title">수익온 선물 자동매매, '헷지 기능' 무료 제공 실시</strong>
+                                                <p class="excerpt">출처 : 스마트타임스. 선물 자동매매 사용자를 위한 헷지 기능을 무료로 제공한다.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/091/002/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">서울일보</span>
+                                                <span class="date">2025.01.16</span>
+                                                <strong class="title">증시 수장들 "암호화폐 ETF 검토" 발표 후, AI 기대치 고조</strong>
+                                                <p class="excerpt">자본시장 유관기관장들이 잇달아 암호화폐 상장지수펀드(ETF)에 대한 적극적인 사업 의지를 표명하고 있다.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/208/001/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">서울일보</span>
+                                                <span class="date">2024.10.02</span>
+                                                <strong class="title">금융혁명시대의 가상화폐, AI 기술혁신으로 접근해야</strong>
+                                                <p class="excerpt">블록체인 기술을 기반으로 하는 혁신적 화폐 시스템은 기존 금융 체계의 한계를 뛰어넘어 새로운 경제 패러다임을 만든다.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/450/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">서울일보</span>
+                                                <span class="date">2024.08.05</span>
+                                                <strong class="title">가상화폐, 수익률보다 안정성 우선해야</strong>
+                                                <p class="excerpt">미국 대선을 앞두고 가상화폐에 대한 열기가 다시 불타오르는 가운데 안정성의 중요성이 부각되고 있다.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/447/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">FT스포츠</span>
+                                                <span class="date">2024.07.10</span>
+                                                <strong class="title">수익온, 비트겟 거래소서 '감사 투자 대회' 개최…최대 4천 USDT 상금</strong>
+                                                <p class="excerpt">국제 디지털 자산 거래소 비트겟(BitGet)에서 투자 대회를 개최한다고 밝혔다.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/444/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">FT스포츠</span>
+                                                <span class="date">2024.06.18</span>
+                                                <strong class="title">수익온, 비트코인 '선물' 자동매매 프로그램 정식 출시</strong>
+                                                <p class="excerpt">오랜 개발 끝에 정식으로 비트코인 선물 자동매매 프로그램을 선보인다고 밝혔다.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/441/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">스타데일리뉴스</span>
+                                                <span class="date">2024.05.23</span>
+                                                <strong class="title">수익온, 비트코인 선물 자동매매 프로그램 신제품 출시</strong>
+                                                <p class="excerpt">현물 자동매매 프로그램에 이어 선물 자동매매 프로그램을 출시했다고 밝혔다.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" rel="noopener">
+                                            <div class="thumb"><img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/438/370x240.crop.jpg" alt=""></div>
+                                            <div class="text">
+                                                <span class="press">스타데일리뉴스</span>
+                                                <span class="date">2024.04.30</span>
+                                                <strong class="title">수익온, 비트코인 자동매매 프로그램 출시</strong>
+                                                <p class="excerpt">빅데이터 AI를 기반으로 24시간 자동 매매를 지원하는 프로그램을 출시했다.</p>
+                                            </div>
+                                        </a>
+                                    </div></div></div>
+                        </div>
+
+                        <!-- 유튜브 스와이퍼 -->
+                        <div class="youtube-block" data-aos="fade-up">
+                            <div class="block-head">
+                                <h3>유튜브</h3>
+                                <div class="nav-btns">
+                                    <button type="button" class="btn-prev youtube-prev" aria-label="이전 영상">이전</button>
+                                    <button type="button" class="btn-next youtube-next" aria-label="다음 영상">다음</button>
+                                </div>
+                            </div>
+                            <div class="swiper youtube-slide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="Ral2j2Xp2-w" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/583/007/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">수익온 회원님 릴레이 수익 3월 총결산!</strong>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="_Iw1NPj2D_Y" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/582/007/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">수익온 회원님 릴레이 수익 1월 총결산!</strong>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="V4vits0VyvI" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/870/006/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">비트코인 자동매매를 9개월간 돌려보았습니다</strong>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="L5s2BcMChYs" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/869/006/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">'자동매매' 실상은 이렇습니다!</strong>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="gujx183z28M" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/866/006/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">수익온 회원님 릴레이 수익 12월 총결산!</strong>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="ljbnm3ssKoM" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/867/006/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">(실제 리뷰) "올해 최고의 선택" 회원님 리얼후기</strong>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="4D1tImKXjBo" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/863/006/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">(실제 리뷰) "체험판으로도 일주일에 5% 수익이 나더라구요"</strong>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:void(0);" data-yt-id="cknj-1T5ui8" class="yt-open">
+                                            <div class="thumb">
+                                                <img src="https://xn--2j1b5rp8k4maa529p4ic.com/files/thumbnails/517/006/640x360.crop.jpg" alt="">
+                                                <span class="play-icon" aria-hidden="true"><i class="ri-play-fill"></i></span>
+                                            </div>
+                                            <strong class="title">(실제 리뷰) "매매 스트레스가 제로입니다ㅎㅎ"</strong>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+           
+
+                <!-- NEWS (뉴스 + 유튜브) -->
+                <section class="our-cert our-cert--light" id="certificates">
+                    <div class="inner">
+                        <div class="scene-title" data-aos="fade-up" data-aos-duration="800">
+                            <strong>다수의 인증기관에서<br>서류 공증 완료</strong>
+                            <p>관련 인증서를 통해 저희의 신뢰성을 확인하실 수 있습니다.<br>고객님께 최상의 경험을 제공하기 위해 최선을 다하고 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="cert-slide-wrap" data-aos="fade-up">
+                        <div class="swiper cert-slide slide-right">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img4.jpg">
+                                    <div class="cert-img"><img src="/assets/images/vision_img4.jpg" alt="인증서 1"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img4_logo.png" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img5.jpg">
+                                    <div class="cert-img"><img src="/assets/images/vision_img5.jpg" alt="인증서 2"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img5_logo.png" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img6.jpg">
+                                    <div class="cert-img"><img src="/assets/images/vision_img6.jpg" alt="인증서 3"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img6_logo.png" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img7.png">
+                                    <div class="cert-img"><img src="/assets/images/vision_img7.png" alt="인증서 4"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img7_logo.png" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img8.jpg">
+                                    <div class="cert-img"><img src="/assets/images/vision_img8.jpg" alt="인증서 5"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img8_logo.png" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img9.jpg">
+                                    <div class="cert-img"><img src="/assets/images/vision_img9.jpg" alt="인증서 6"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img9_logo.png" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img10.jpg">
+                                    <div class="cert-img"><img src="/assets/images/vision_img10.jpg" alt="인증서 7"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img10_logo.svg" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="swiper-slide cert-item" data-cert="/assets/images/vision_img11.jpg">
+                                    <div class="cert-img"><img src="/assets/images/vision_img11.jpg" alt="인증서 8"></div>
+                                    <div class="cert-logo"><img src="/assets/images/vision_img10_logo.svg" alt="발급처"></div>
+                                    <button type="button" class="cert-zoom" aria-label="크게 보기"><i class="ri-add-line" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 인증서 줌 모달 -->
+                <div id="cert-modal" class="cert-modal" aria-hidden="true">
+                    <div class="cert-modal__dim" data-cert-close></div>
+                    <button type="button" class="cert-modal__close" data-cert-close aria-label="닫기"><i class="ri-close-line"></i></button>
+                    <div class="cert-modal__panel" role="dialog" aria-modal="true" aria-label="인증서 확대 보기">
+                        <img src="" alt="인증서 확대" class="cert-modal__img">
+                    </div>
+                </div>
+
+                <!-- 유튜브 재생 모달 -->
+                <div id="yt-modal" class="yt-modal" aria-hidden="true">
+                    <div class="yt-modal__dim" data-yt-close></div>
+                    <div class="yt-modal__panel" role="dialog" aria-modal="true" aria-label="유튜브 영상 재생">
+                        <button type="button" class="yt-modal__close" data-yt-close aria-label="닫기"><i class="ri-close-line"></i></button>
+                        <div class="yt-modal__frame">
+                            <iframe id="yt-modal-iframe" src="" title="유튜브 영상" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <!-- TRIAL (무료체험) -->
+                <section id="trial" class="sec sec-trial">
+                    <div class="inner">
+                        <div class="section-head" data-aos="fade-up">
+                            <span class="eyebrow">Free Trial</span>
+                            <strong class="section-title">당신의 투자가 편안해지는 시간,<br>오직 <em>수익온</em>에서 무료체험 해보세요</strong>
+                        </div>
+                        <form class="trial-form" data-aos="fade-up" novalidate>
+                            <!-- TODO: 백엔드 연동 (action / method / 이메일/DB/알림톡) -->
+                            <div class="form-grid">
+                                <div class="form-row">
+                                    <label for="trial-name">이름 <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="text" id="trial-name" name="name" required placeholder="이름을 입력해주세요">
+                                </div>
+                                <div class="form-row">
+                                    <label for="trial-phone">연락처 <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="tel" id="trial-phone" name="phone" required placeholder="010-0000-0000" pattern="[0-9\-]+">
+                                </div>
+                            </div>
+                            <div class="form-terms" aria-label="개인정보 수집·이용 안내">
+                                <h4>※ 개인정보 수집 및 이용동의</h4>
+                                <div class="terms-box" tabindex="0">
+                                    <p>"(주)써밋랩스"(이하 "회사")는 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.</p>
+                                    <p>우리 회사는 개인정보처리방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.</p>
+                                    <p>우리 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p>
+                                    <p class="terms-effective">본 방침은 2026년 03월 19일 부터 시행됩니다.</p>
+
+                                    <ol class="terms-toc">
+                                        <li>수집하는 개인정보 항목</li>
+                                        <li>개인정보의 수집 및 이용목적</li>
+                                        <li>개인정보의 보유 및 이용기간</li>
+                                        <li>개인정보의 파기절차 및 방법</li>
+                                        <li>개인정보 제공</li>
+                                        <li>수집한 개인정보의 위탁</li>
+                                        <li>정보주체와 법정대리인의 권리 및 의무 및 행사방법</li>
+                                        <li>개인정보 자동수집 장치</li>
+                                    </ol>
+
+                                    <p>개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.</p>
+
+                                    <h5>파기절차</h5>
+                                    <p>이용자님이 문의사항 접수 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기되어 집니다.</p>
+                                    <p>별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 보유되어지는 이외의 다른 목적으로 이용되지 않습니다.</p>
+
+                                    <h5>파기방법</h5>
+                                    <ul>
+                                        <li>전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</li>
+                                    </ul>
+
+                                    <h5>개인정보 제공</h5>
+                                    <p>회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.</p>
+                                    <ul>
+                                        <li>이용자들이 사전에 동의한 경우</li>
+                                    </ul>
+
+                                    <h5>개인정보 침해 관련 상담·신고</h5>
+                                    <ol>
+                                        <li>개인정보침해신고센터 (privacy.kisa.or.kr / 국번없이 118)</li>
+                                        <li>대검찰청 사이버수사과 (www.spo.go.kr / 국번없이 1301)</li>
+                                        <li>경찰청 사이버수사국 (police.go.kr / 국번없이 182)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="form-agree">
+                                <input type="checkbox" id="trial-agree" name="agree" required>
+                                <label for="trial-agree">
+                                    위 개인정보 수집·이용에 동의합니다.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-submit">무료체험 신청하기</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- QUICK MENU (자주묻는질문 / 오시는길 / 공지사항) -->
+                <section class="sec sec-quick" aria-label="고객센터">
+                    <div class="quick-bg" aria-hidden="true"></div>
+                    <div class="inner">
+                        <div class="quick-head" data-aos="fade-up">
+                            <span class="eyebrow">Customer Center</span>
+                            <strong class="quick-title">고객센터</strong>
+                        </div>
+                        <ul class="quick-list">
+                            <li class="quick-item" data-aos="fade-up">
+                                <a href="/support/faq">
+                                    <span class="quick-ico" aria-hidden="true"><i class="ri-question-line"></i></span>
+                                    <strong class="quick-label">자주묻는질문</strong>
+                                    <p class="quick-desc">고객님들이 자주 묻는 질문들을<br>모아놨어요</p>
+                                    <span class="quick-arrow" aria-hidden="true"><i class="ri-arrow-right-line"></i></span>
+                                </a>
+                            </li>
+                            <li class="quick-item" data-aos="fade-up" data-aos-delay="100">
+                                <a href="/company/location">
+                                    <span class="quick-ico" aria-hidden="true"><i class="ri-map-pin-2-line"></i></span>
+                                    <strong class="quick-label">오시는길</strong>
+                                    <p class="quick-desc">대표번호 : 1551 - 2574<br>오시는 길을 안내드려요</p>
+                                    <span class="quick-arrow" aria-hidden="true"><i class="ri-arrow-right-line"></i></span>
+                                </a>
+                            </li>
+                            <li class="quick-item" data-aos="fade-up" data-aos-delay="200">
+                                <a href="/support/notice">
+                                    <span class="quick-ico" aria-hidden="true"><i class="ri-megaphone-line"></i></span>
+                                    <strong class="quick-label">공지사항</strong>
+                                    <p class="quick-desc">공지 / 업데이트<br>중요사항을 안내드려요</p>
+                                    <span class="quick-arrow" aria-hidden="true"><i class="ri-arrow-right-line"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </section>
+        <!-- 플로팅 무료체험 신청 -->
+        <button type="button" id="trial-fab" class="trial-fab" data-trial-open aria-label="무료체험 신청">
+            <i class="ri-rocket-2-fill" aria-hidden="true"></i>
+            <span>무료체험신청</span>
+        </button>
+
+        <!-- 신청 모달 -->
+        <div id="trial-modal" class="trial-modal" aria-hidden="true">
+            <div class="trial-modal__dim" data-trial-close></div>
+            <div class="trial-modal__panel" role="dialog" aria-modal="true" aria-labelledby="trial-modal-title">
+                <button type="button" class="trial-modal__close" data-trial-close aria-label="닫기">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+                <h2 id="trial-modal-title">무료체험 신청</h2>
+                <p class="trial-modal__desc">담당자가 빠르게 연락드릴게요.</p>
+                <form id="trial-form" class="trial-form" novalidate>
+                    <label class="trial-field">
+                        <span>이름</span>
+                        <input type="text" name="name" placeholder="홍길동" autocomplete="name" required>
+                    </label>
+                    <label class="trial-field">
+                        <span>연락처</span>
+                        <input type="tel" name="phone" placeholder="010-0000-0000" autocomplete="tel" inputmode="tel" required>
+                    </label>
+                    <div class="trial-agree-wrap">
+                        <div id="trial-terms" class="trial-terms" tabindex="0" aria-label="개인정보 수집·이용 안내">
+                            <h4>※ 개인정보 수집 및 이용동의</h4>
+                            <p>"(주)써밋랩스"(이하 "회사")는 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.</p>
+                            <p>우리 회사는 개인정보처리방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.</p>
+                            <p>우리 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p>
+                            <p class="terms-effective">본 방침은 2026년 03월 19일 부터 시행됩니다.</p>
+
+                            <ol class="terms-toc">
+                                <li>수집하는 개인정보 항목</li>
+                                <li>개인정보의 수집 및 이용목적</li>
+                                <li>개인정보의 보유 및 이용기간</li>
+                                <li>개인정보의 파기절차 및 방법</li>
+                                <li>개인정보 제공</li>
+                                <li>수집한 개인정보의 위탁</li>
+                                <li>정보주체와 법정대리인의 권리 및 의무 및 행사방법</li>
+                                <li>개인정보 자동수집 장치</li>
+                            </ol>
+
+                            <p>개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.</p>
+
+                            <h5>파기절차</h5>
+                            <p>이용자님이 문의사항 접수 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기되어 집니다.</p>
+                            <p>별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 보유되어지는 이외의 다른 목적으로 이용되지 않습니다.</p>
+
+                            <h5>파기방법</h5>
+                            <ul>
+                                <li>전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</li>
+                            </ul>
+
+                            <h5>개인정보 제공</h5>
+                            <p>회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.</p>
+                            <ul>
+                                <li>이용자들이 사전에 동의한 경우</li>
+                            </ul>
+
+                            <h5>개인정보 침해 관련 상담·신고</h5>
+                            <ol>
+                                <li>개인정보침해신고센터 (privacy.kisa.or.kr / 국번없이 118)</li>
+                                <li>대검찰청 사이버수사과 (www.spo.go.kr / 국번없이 1301)</li>
+                                <li>경찰청 사이버수사국 (police.go.kr / 국번없이 182)</li>
+                            </ol>
+                        </div>
+                        <label class="trial-agree">
+                            <input type="checkbox" name="agree" required>
+                            <span>위 개인정보 수집·이용에 동의합니다.</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="trial-submit">신청하기</button>
+                </form>
+            </div>
+        </div>
+
+        <footer id="footer">
+			<div class="footer">
+				<div class="bh_wrap po-r">
+					<div class="bh_row ai-c no-gutters">
+	<div class="footer_logo lg:col-auto col-12">
+							<img src="/assets/images/logo.svg" alt="수익온">
+						</div>	<div class="copyright lg:col col-12 pd-0">
+	<nav class="footer_menu" id="footer_menu">
+								<ul>
+										<li>
+										<a href="/tos"><span>이용약관</span></a>
+									</li>
+										<li>
+										<a class="bh bh_color_white fw-b" href="/privacy"><span>개인정보처리방침</span></a>
+									</li>
+									</ul>
+							</nav>	<div class="f_info">
+	<div class="lg:ds-f ds-n bh-flex-wrap flex_box">
+		<p class="mb-0 lg:fs-16 fs-14">대표이사 : 조호진</p>
+		<p class="mb-0 lg:fs-16 fs-14">주소 : 경기도 구리시 갈매동552-1 갈매역 스칸센 힐스테이트 지식산업센터 A동 704호</p>
+	</div>
+	<div class="lg:ds-f ds-n bh-flex-wrap flex_box">
+		<p class="mb-0 lg:fs-16 fs-14">사업자등록번호 : 321-11-02236 </p>
+		<p class="mb-0 lg:fs-16 fs-14">이메일 : oru_da@naver.com</p>
+		<p class="mb-0 lg:fs-16 fs-14 bh_color_white">대표번호 : 1551 - 2574</p>
+	</div>
+	<div class="lg:ds-n ds-f bh-flex-wrap flex_box ">
+		<p class="mb-0 lg:fs-16 fs-14">주소 : 경기도 구리시 갈매동552-1 갈매역 스칸센 힐스테이트 지식산업센터 A동 704호</p>
+		<p class="mb-0 lg:fs-16 fs-14">대표이사 : 조호진</p>
+		<p class="mb-0 lg:fs-16 fs-14">사업자등록번호 : 321-11-02236 </p>
+		<p class="mb-0 lg:fs-16 fs-14">이메일 : oru_da@naver.com</p>
+		<p class="mb-0 lg:fs-16 fs-14 bh_color_white">대표번호 : 1551 - 2574</p>
+	</div>
+	<span class="ds-b mt-10">COPYRIGHT ⓒ 수익온. All rights reserved</span>
+	<span class="ds-b">*본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다. 특히 가상 자산은 고위험 상품으로 투자금의 전부 또는 일부 손실을 초래할 수 있습니다.</span>
+</div>						</div>					</div>
+					<div class="sns_link_box">
+						<div class="ds-f">
+							<a href="https://www.youtube.com/@oruda_corp1" target="_blank" class="ds-b" rel="noopener" aria-label="유튜브"><i class="ri-youtube-fill"></i></a>
+							<a href="https://pf.kakao.com/_xbiPWxj/chat" target="_blank" class="ds-b" rel="noopener" aria-label="카카오톡"><i class="ri-kakao-talk-fill"></i></a>
+							<a href="https://blog.naver.com/qfghqymhk" target="_blank" class="ds-b" rel="noopener" aria-label="네이버 블로그"><img src="/assets/images/blog.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+    </div>
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>

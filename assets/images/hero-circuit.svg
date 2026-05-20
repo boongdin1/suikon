@@ -1,0 +1,237 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <filter id="tg" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="tgSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+    <linearGradient id="trunkG" x1="960" y1="1080" x2="960" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#ffd5a6" stop-opacity="1" />
+      <stop offset="25%"  stop-color="#ff9a3d" stop-opacity="0.95" />
+      <stop offset="70%"  stop-color="#ff7a1a" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="branchG" x1="0" y1="540" x2="1920" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#ff6a00" stop-opacity="0.2" />
+      <stop offset="50%"  stop-color="#ff9a3d" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0.2" />
+    </linearGradient>
+    <radialGradient id="groundG" cx="960" cy="1080" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#ffd5a6" stop-opacity="0.55" />
+      <stop offset="40%"  stop-color="#ff7a1a" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- 지면 글로우 -->
+  <ellipse cx="960" cy="1080" rx="520" ry="180" fill="url(#groundG)" />
+
+  <!-- 줄기 외곽 글로우 -->
+  <polygon points="945,1080 975,1080 967,200 953,200" fill="#ff7a1a" opacity="0.55" filter="url(#tgSoft)" />
+
+  <!-- 줄기 메인 (사다리꼴) -->
+  <polygon points="947,1080 973,1080 964,200 956,200" fill="url(#trunkG)" filter="url(#tg)" />
+
+  <!-- 베이스 뿌리 -->
+  <g stroke="url(#trunkG)" stroke-width="4" stroke-linecap="round" fill="none" filter="url(#tg)">
+    <path d="M960 1080 H880 V1060 H820" />
+    <path d="M960 1080 H1040 V1060 H1100" />
+    <path d="M960 1070 H760 V1050 H700" />
+    <path d="M960 1070 H1160 V1050 H1220" />
+    <path d="M956 1060 V1020 H900" />
+    <path d="M964 1060 V1020 H1020" />
+  </g>
+
+  <!-- 상단 안테나 분기 (y=200에서 위로) -->
+  <g stroke="url(#trunkG)" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#tg)">
+    <path d="M960 200 V40" />
+    <path d="M956 220 V120 H904 V60" />
+    <path d="M964 220 V120 H1016 V60" />
+    <path d="M952 240 V160 H856 V80" />
+    <path d="M968 240 V160 H1064 V80" />
+    <path d="M948 260 V200 H804 V100" />
+    <path d="M972 260 V200 H1116 V100" />
+  </g>
+
+  <!-- 큰 가지 — 좌측 -->
+  <g stroke="url(#branchG)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#tg)">
+    <path d="M956 700 H720 V600 H600 V500 H500 V400 H420" />
+    <path d="M956 620 H760 V520 H660 V440 H560" />
+    <path d="M956 540 H720 V460 H620 V380 H520 V300 H440" />
+    <path d="M956 460 H800 V380 H720 V300 H640 V230 H560" />
+    <path d="M956 380 H700 V320 H620" />
+    <path d="M956 320 H760 V260 H680 V190 H600" />
+  </g>
+
+  <!-- 큰 가지 — 우측 (대칭) -->
+  <g stroke="url(#branchG)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#tg)">
+    <path d="M964 700 H1200 V600 H1320 V500 H1420 V400 H1500" />
+    <path d="M964 620 H1160 V520 H1260 V440 H1360" />
+    <path d="M964 540 H1200 V460 H1300 V380 H1400 V300 H1480" />
+    <path d="M964 460 H1120 V380 H1200 V300 H1280 V230 H1360" />
+    <path d="M964 380 H1220 V320 H1300" />
+    <path d="M964 320 H1160 V260 H1240 V190 H1320" />
+  </g>
+
+  <!-- 중간 가지 (좌측) -->
+  <g stroke="url(#branchG)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9" filter="url(#tg)">
+    <path d="M956 780 H840 V740 H780" />
+    <path d="M956 740 H880 V680 H820 V640 H780" />
+    <path d="M956 660 H800 V620 H760" />
+    <path d="M956 580 H840" />
+    <path d="M956 500 H860 V440 H800" />
+    <path d="M956 420 H820" />
+    <path d="M956 340 H840 V280 H780" />
+    <path d="M956 280 H880 V220 H820" />
+  </g>
+
+  <!-- 중간 가지 (우측) -->
+  <g stroke="url(#branchG)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9" filter="url(#tg)">
+    <path d="M964 780 H1080 V740 H1140" />
+    <path d="M964 740 H1040 V680 H1100 V640 H1140" />
+    <path d="M964 660 H1120 V620 H1160" />
+    <path d="M964 580 H1080" />
+    <path d="M964 500 H1060 V440 H1120" />
+    <path d="M964 420 H1100" />
+    <path d="M964 340 H1080 V280 H1140" />
+    <path d="M964 280 H1040 V220 H1100" />
+  </g>
+
+  <!-- 잔가지 (얇게, 흐리게) -->
+  <g stroke="#ff8a3d" stroke-opacity="0.42" stroke-width="1.3" stroke-linecap="round" fill="none">
+    <path d="M780 740 V780 H720" />
+    <path d="M600 500 H540 V540" />
+    <path d="M620 380 H580 V340 H540" />
+    <path d="M560 230 V200" />
+    <path d="M520 300 V270" />
+    <path d="M440 300 H400" />
+    <path d="M420 400 V360" />
+    <path d="M1140 740 V780 H1200" />
+    <path d="M1320 500 H1380 V540" />
+    <path d="M1300 380 H1340 V340 H1380" />
+    <path d="M1360 230 V200" />
+    <path d="M1400 300 V270" />
+    <path d="M1480 300 H1520" />
+    <path d="M1500 400 V360" />
+    <path d="M880 60 V40" />
+    <path d="M1040 60 V40" />
+    <path d="M820 80 V60" />
+    <path d="M1100 80 V60" />
+  </g>
+
+  <!-- 분기점 노드 (줄기) -->
+  <g fill="#ff9a3d" opacity="0.95" filter="url(#tg)">
+    <circle cx="960" cy="200" r="4.5" />
+    <circle cx="960" cy="280" r="3.5" />
+    <circle cx="960" cy="320" r="3.5" />
+    <circle cx="960" cy="380" r="3.5" />
+    <circle cx="960" cy="420" r="3.5" />
+    <circle cx="960" cy="460" r="3.5" />
+    <circle cx="960" cy="500" r="3.5" />
+    <circle cx="960" cy="540" r="3.5" />
+    <circle cx="960" cy="580" r="3.5" />
+    <circle cx="960" cy="620" r="3.5" />
+    <circle cx="960" cy="660" r="3.5" />
+    <circle cx="960" cy="700" r="3.5" />
+    <circle cx="960" cy="740" r="3.5" />
+    <circle cx="960" cy="780" r="3.5" />
+  </g>
+
+  <!-- SMD 잎 - 사각 IC 칩 (큰 컴포넌트) -->
+  <g fill="#1a0f08" stroke="#ffd5a6" stroke-width="1.2" filter="url(#tg)">
+    <rect x="408" y="392" width="22" height="16" rx="1" />
+    <rect x="548" y="290" width="22" height="16" rx="1" />
+    <rect x="430" y="220" width="22" height="16" rx="1" />
+    <rect x="612" y="180" width="22" height="16" rx="1" />
+    <rect x="788" y="100" width="20" height="14" rx="1" />
+    <rect x="1112" y="100" width="20" height="14" rx="1" />
+    <rect x="1290" y="180" width="22" height="16" rx="1" />
+    <rect x="1468" y="220" width="22" height="16" rx="1" />
+    <rect x="1350" y="290" width="22" height="16" rx="1" />
+    <rect x="1490" y="392" width="22" height="16" rx="1" />
+    <rect x="490" y="550" width="20" height="14" rx="1" />
+    <rect x="1410" y="550" width="20" height="14" rx="1" />
+  </g>
+
+  <!-- IC 칩 다리 (선) -->
+  <g stroke="#ffd5a6" stroke-opacity="0.55" stroke-width="0.8">
+    <path d="M412 392 V388 M418 392 V388 M424 392 V388" />
+    <path d="M412 408 V412 M418 408 V412 M424 408 V412" />
+    <path d="M552 290 V286 M558 290 V286 M564 290 V286" />
+    <path d="M552 306 V310 M558 306 V310 M564 306 V310" />
+    <path d="M1294 180 V176 M1300 180 V176 M1306 180 V176" />
+    <path d="M1294 196 V200 M1300 196 V200 M1306 196 V200" />
+  </g>
+
+  <!-- 작은 SMD 캡 -->
+  <g fill="#ff9a3d" filter="url(#tg)">
+    <rect x="395" y="296" width="12" height="6" rx="0.6" />
+    <rect x="515" y="436" width="12" height="6" rx="0.6" />
+    <rect x="595" y="346" width="10" height="5" rx="0.6" />
+    <rect x="675" y="256" width="12" height="6" rx="0.6" />
+    <rect x="775" y="376" width="10" height="5" rx="0.6" />
+    <rect x="815" y="216" width="12" height="6" rx="0.6" />
+    <rect x="775" y="636" width="12" height="6" rx="0.6" />
+    <rect x="715" y="816" width="12" height="6" rx="0.6" />
+    <rect x="1133" y="636" width="12" height="6" rx="0.6" />
+    <rect x="1133" y="816" width="12" height="6" rx="0.6" />
+    <rect x="1135" y="216" width="12" height="6" rx="0.6" />
+    <rect x="1135" y="376" width="10" height="5" rx="0.6" />
+    <rect x="1233" y="256" width="12" height="6" rx="0.6" />
+    <rect x="1315" y="346" width="10" height="5" rx="0.6" />
+    <rect x="1393" y="436" width="12" height="6" rx="0.6" />
+    <rect x="1513" y="296" width="12" height="6" rx="0.6" />
+  </g>
+
+  <!-- LED 잎 노드 (밝은 원형) -->
+  <g fill="#ffd5a6" filter="url(#tg)">
+    <circle cx="420" cy="400" r="2" />
+    <circle cx="560" cy="298" r="2" />
+    <circle cx="441" cy="228" r="2" />
+    <circle cx="623" cy="188" r="2" />
+    <circle cx="798" cy="107" r="2" />
+    <circle cx="1122" cy="107" r="2" />
+    <circle cx="1301" cy="188" r="2" />
+    <circle cx="1479" cy="228" r="2" />
+    <circle cx="1361" cy="298" r="2" />
+    <circle cx="1500" cy="400" r="2" />
+    <circle cx="500" cy="557" r="2" />
+    <circle cx="1420" cy="557" r="2" />
+    <circle cx="780" cy="740" r="3" />
+    <circle cx="780" cy="640" r="3" />
+    <circle cx="760" cy="620" r="3" />
+    <circle cx="820" cy="220" r="3" />
+    <circle cx="820" cy="280" r="3" />
+    <circle cx="1100" cy="220" r="3" />
+    <circle cx="1100" cy="280" r="3" />
+    <circle cx="1140" cy="740" r="3" />
+    <circle cx="1140" cy="640" r="3" />
+    <circle cx="1160" cy="620" r="3" />
+    <circle cx="600" cy="190" r="2.5" />
+    <circle cx="1320" cy="190" r="2.5" />
+    <circle cx="560" cy="300" r="2.5" />
+    <circle cx="1360" cy="300" r="2.5" />
+    <circle cx="540" cy="340" r="2.5" />
+    <circle cx="1380" cy="340" r="2.5" />
+  </g>
+
+  <!-- 안테나 끝 글로우 -->
+  <g fill="#ffe6c4" filter="url(#tg)">
+    <circle cx="960" cy="40" r="4" />
+    <circle cx="904" cy="60" r="3" />
+    <circle cx="1016" cy="60" r="3" />
+    <circle cx="856" cy="80" r="3" />
+    <circle cx="1064" cy="80" r="3" />
+    <circle cx="804" cy="100" r="3" />
+    <circle cx="1116" cy="100" r="3" />
+  </g>
+
+  <!-- 베이스 라이트 (큰 글로우) -->
+  <ellipse cx="960" cy="1078" rx="120" ry="14" fill="#ffd5a6" opacity="0.55" filter="url(#tgSoft)" />
+  <ellipse cx="960" cy="1078" rx="40" ry="6" fill="#ffffff" opacity="0.95" filter="url(#tg)" />
+</svg>

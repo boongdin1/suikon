@@ -324,8 +324,8 @@ $(function () {
             });
         };
 
-        const FADE = 0.55; // segment 내 페이드 인/아웃 비율 (더 천천히)
-        const FIRST_DELAY = 0.4; // 첫 scene 시작 지연 (segment 비율 안에서)
+        const FADE = 0.5; // segment 내 페이드 인/아웃 비율
+        const FIRST_DELAY = 0.15; // 첫 scene 시작 지연 (segment 비율 안에서)
         const updateScenes = (progress) => {
             const n = scenes.length;
             const segLen = 1 / n;

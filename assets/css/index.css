@@ -818,6 +818,7 @@ body.menu-open {
 .section-04 {
   position: relative;
   height: 500vh;
+  background: #000;
 }
 .section-04 .sticky {
   position: sticky;

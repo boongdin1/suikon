@@ -207,7 +207,7 @@ $(function () {
         ScrollTrigger.create({
             trigger: hero,
             start: "top top",
-            end: "25% top",
+            end: "20% top",
             scrub: 0.2,
             invalidateOnRefresh: true,
             onUpdate: (self) => {
@@ -241,19 +241,19 @@ $(function () {
             scrub: 0.3,
             onUpdate: (self) => {
                 const p = self.progress;
-                // 배경 영상: 0~0.3 페이드인(→0.7), 0.3~0.65 유지, 0.65~1 페이드아웃(→0)
+                // 배경 영상: 0~0.15 페이드인(→0.7), 0.15~0.65 유지, 0.65~1 페이드아웃(→0)
                 let bgOp = 0;
-                if (p < 0.3) bgOp = (p / 0.3) * 0.7;
+                if (p < 0.15) bgOp = (p / 0.15) * 0.7;
                 else if (p < 0.65) bgOp = 0.7;
                 else bgOp = ((1 - p) / 0.35) * 0.7;
                 bg.style.opacity = Math.max(0, Math.min(0.7, bgOp));
 
-                // 텍스트: 0.08~0.35 페이드인, 0.35~0.7 유지, 0.7~0.95 페이드아웃
+                // 텍스트: 0.04~0.2 페이드인, 0.2~0.7 유지, 0.7~0.95 페이드아웃
                 let tOp = 0;
                 let tY = 20;
-                if (p < 0.08) { tOp = 0; tY = 20; }
-                else if (p < 0.35) {
-                    const k = (p - 0.08) / 0.27;
+                if (p < 0.04) { tOp = 0; tY = 20; }
+                else if (p < 0.2) {
+                    const k = (p - 0.04) / 0.16;
                     tOp = k; tY = 20 * (1 - k);
                 } else if (p < 0.7) { tOp = 1; tY = 0; }
                 else if (p < 0.95) {

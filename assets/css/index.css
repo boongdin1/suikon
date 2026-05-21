@@ -500,7 +500,7 @@ body.menu-open {
    ============================================ */
 #hero {
   position: relative;
-  height: 200vh;
+  height: 130vh;
 }
 #hero .hero-sticky {
   position: sticky;

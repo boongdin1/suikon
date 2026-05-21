@@ -3095,7 +3095,7 @@ body.yt-open { overflow: hidden; }
    ============================================ */
 .sec-about {
   position: relative;
-  height: 150vh;
+  height: 100vh;
   background: #000;
   color: #fff;
 }

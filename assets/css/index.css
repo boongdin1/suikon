@@ -1008,7 +1008,7 @@ body.menu-open {
 }
 .section-04 .sticky .numberProgress canvas {
   position: absolute;
-  width: min(420px, 88%);
+  width: min(280px, 88%);
   height: 46px;
   left: 50%;
   bottom: 36px;
@@ -1017,6 +1017,7 @@ body.menu-open {
 @media (max-width: 768px) {
   .section-04 .sticky .numberProgress canvas {
     width: min(320px, 92%);
+    min-width: 280px;
     height: 40px;
     bottom: 22px;
   }
@@ -3109,6 +3110,10 @@ body.yt-open { overflow: hidden; }
   position: absolute;
   inset: 0;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease-out;
+}
+.sec-about.is-in .section-bg {
   opacity: 0.55;
 }
 .sec-about .section-bg video {
@@ -3138,6 +3143,19 @@ body.yt-open { overflow: hidden; }
   height: 100%;
   display: flex;
   align-items: center;
+}
+.sec-about .title-head,
+.sec-about .title-body {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.sec-about .title-head { transition-delay: 0.2s; }
+.sec-about .title-body { transition-delay: 0.45s; }
+.sec-about.is-in .title-head,
+.sec-about.is-in .title-body {
+  opacity: 1;
+  transform: translateY(0);
 }
 .sec-about .inner {
   max-width: 1400px;

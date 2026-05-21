@@ -219,7 +219,9 @@ $(function () {
     })();
 
     /* --------------------------------
-     * SECTION-01 (about) — 단일 화면, 진입 시 영상 재생
+     * SECTION-01 (about) — 단일 화면
+     * 진입 시 .is-in 추가 → 영상/텍스트 페이드인
+     * 완전히 빠져나가면 .is-in 제거 → 재진입 시 애니메이션 리셋
      * -------------------------------- */
     (function initAboutSection() {
         const section = document.querySelector(".sec-about");
@@ -235,14 +237,16 @@ $(function () {
         const io = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
                 if (e.isIntersecting) {
+                    section.classList.add("is-in");
                     ensureSrc();
                     const p = video.play && video.play();
                     if (p && p.catch) p.catch(() => {});
                 } else {
+                    section.classList.remove("is-in");
                     video.pause && video.pause();
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0 });
         io.observe(section);
     })();
 
@@ -305,6 +309,8 @@ $(function () {
         };
 
         const FADE = 0.5; // segment 내 페이드 인/아웃 비율
+        const LAST_FADE_IN = 0.2; // 마지막 scene은 짧게 페이드인
+        const LAST_OVERLAP = 0.5; // 마지막 scene이 이전 segment와 겹치는 비율 (크로스페이드)
         const FIRST_DELAY = 0; // 첫 scene 시작 지연 (segment 비율 안에서)
         const updateScenes = (progress) => {
             const n = scenes.length;
@@ -312,14 +318,25 @@ $(function () {
             let activeIdx = -1;
             let activeOp = -1;
             scenes.forEach((s, i) => {
+                const isLast = i === n - 1;
                 const offset = i === 0 ? FIRST_DELAY * segLen : 0;
-                const segStart = i * segLen + offset;
-                const denom = segLen - offset;
+                let segStart = i * segLen + offset;
+                let denom = segLen - offset;
+                if (isLast) {
+                    // 마지막 scene: 이전 segment 끝부분과 겹쳐서 일찍 시작
+                    segStart -= LAST_OVERLAP * segLen;
+                    denom += LAST_OVERLAP * segLen;
+                }
                 const local = denom > 0 ? (progress - segStart) / denom : 0;
                 let op = 0;
-                if (local >= 0 && local <= 1) {
+                if (isLast) {
+                    // 마지막 scene: ramp 후 op=1 유지 (local > 1 이어도, fade-out 없음)
+                    if (local >= 0) {
+                        op = local < LAST_FADE_IN ? local / LAST_FADE_IN : 1;
+                    }
+                } else if (local >= 0 && local <= 1) {
                     if (local < FADE) op = local / FADE;
-                    else if (local > 1 - FADE && i < n - 1) op = (1 - local) / FADE;
+                    else if (local > 1 - FADE) op = (1 - local) / FADE;
                     else op = 1;
                 }
                 op = Math.max(0, Math.min(1, op));
@@ -350,7 +367,7 @@ $(function () {
             const sideW = 44;
             const padX = sideW + 10;
             const usable = Math.max(0, w - padX * 2);
-            const totalTicks = 36;
+            const totalTicks = 12;
             const tickW = 2;
             const tickStep = usable / (totalTicks - 1);
             const tickH = 11;

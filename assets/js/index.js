@@ -219,51 +219,31 @@ $(function () {
     })();
 
     /* --------------------------------
-     * SECTION-01 (about) — sticky scroll
-     * 영상 opacity 0 → 0.7 → 0, 텍스트도 동기 페이드
+     * SECTION-01 (about) — 단일 화면, 진입 시 영상 재생
      * -------------------------------- */
-    (function initAboutScroll() {
+    (function initAboutSection() {
         const section = document.querySelector(".sec-about");
         if (!section) return;
-        const bg = section.querySelector(".section-bg");
-        const title = section.querySelector(".section-title");
-        if (!bg || !title) return;
-
-        bg.style.opacity = 0;
-        title.style.opacity = 0;
-        title.style.transform = "translateY(20px)";
-
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.create({
-            trigger: section,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.3,
-            onUpdate: (self) => {
-                const p = self.progress;
-                // 배경 영상: 0~0.15 페이드인(→0.7), 0.15~0.8 유지, 0.8~1 페이드아웃(→0)
-                let bgOp = 0;
-                if (p < 0.15) bgOp = (p / 0.15) * 0.7;
-                else if (p < 0.8) bgOp = 0.7;
-                else bgOp = ((1 - p) / 0.2) * 0.7;
-                bg.style.opacity = Math.max(0, Math.min(0.7, bgOp));
-
-                // 텍스트: 0.04~0.2 페이드인, 0.2~0.85 유지, 0.85~1 페이드아웃
-                let tOp = 0;
-                let tY = 20;
-                if (p < 0.04) { tOp = 0; tY = 20; }
-                else if (p < 0.2) {
-                    const k = (p - 0.04) / 0.16;
-                    tOp = k; tY = 20 * (1 - k);
-                } else if (p < 0.85) { tOp = 1; tY = 0; }
-                else if (p < 1) {
-                    const k = (p - 0.85) / 0.15;
-                    tOp = 1 - k; tY = -10 * k;
-                } else { tOp = 0; tY = -10; }
-                title.style.opacity = Math.max(0, Math.min(1, tOp));
-                title.style.transform = `translateY(${tY}px)`;
-            },
-        });
+        const video = section.querySelector(".section-bg video");
+        if (!video) return;
+        const ensureSrc = () => {
+            if (video.dataset && video.dataset.src && !video.getAttribute("src")) {
+                video.src = video.dataset.src;
+                try { video.load(); } catch (e) {}
+            }
+        };
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    ensureSrc();
+                    const p = video.play && video.play();
+                    if (p && p.catch) p.catch(() => {});
+                } else {
+                    video.pause && video.pause();
+                }
+            });
+        }, { threshold: 0.2 });
+        io.observe(section);
     })();
 
 

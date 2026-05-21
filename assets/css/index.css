@@ -3100,9 +3100,8 @@ body.yt-open { overflow: hidden; }
   color: #fff;
 }
 .sec-about .sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  position: relative;
+  height: 100%;
   overflow: hidden;
   background: #000;
 }
@@ -3110,8 +3109,7 @@ body.yt-open { overflow: hidden; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0;
-  will-change: opacity;
+  opacity: 0.55;
 }
 .sec-about .section-bg video {
   width: 100%;
@@ -3140,8 +3138,6 @@ body.yt-open { overflow: hidden; }
   height: 100%;
   display: flex;
   align-items: center;
-  opacity: 0;
-  will-change: opacity, transform;
 }
 .sec-about .inner {
   max-width: 1400px;

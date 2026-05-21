@@ -241,23 +241,23 @@ $(function () {
             scrub: 0.3,
             onUpdate: (self) => {
                 const p = self.progress;
-                // 배경 영상: 0~0.15 페이드인(→0.7), 0.15~0.65 유지, 0.65~1 페이드아웃(→0)
+                // 배경 영상: 0~0.15 페이드인(→0.7), 0.15~0.8 유지, 0.8~1 페이드아웃(→0)
                 let bgOp = 0;
                 if (p < 0.15) bgOp = (p / 0.15) * 0.7;
-                else if (p < 0.65) bgOp = 0.7;
-                else bgOp = ((1 - p) / 0.35) * 0.7;
+                else if (p < 0.8) bgOp = 0.7;
+                else bgOp = ((1 - p) / 0.2) * 0.7;
                 bg.style.opacity = Math.max(0, Math.min(0.7, bgOp));
 
-                // 텍스트: 0.04~0.2 페이드인, 0.2~0.7 유지, 0.7~0.95 페이드아웃
+                // 텍스트: 0.04~0.2 페이드인, 0.2~0.85 유지, 0.85~1 페이드아웃
                 let tOp = 0;
                 let tY = 20;
                 if (p < 0.04) { tOp = 0; tY = 20; }
                 else if (p < 0.2) {
                     const k = (p - 0.04) / 0.16;
                     tOp = k; tY = 20 * (1 - k);
-                } else if (p < 0.7) { tOp = 1; tY = 0; }
-                else if (p < 0.95) {
-                    const k = (p - 0.7) / 0.25;
+                } else if (p < 0.85) { tOp = 1; tY = 0; }
+                else if (p < 1) {
+                    const k = (p - 0.85) / 0.15;
                     tOp = 1 - k; tY = -10 * k;
                 } else { tOp = 0; tY = -10; }
                 title.style.opacity = Math.max(0, Math.min(1, tOp));
@@ -325,7 +325,7 @@ $(function () {
         };
 
         const FADE = 0.5; // segment 내 페이드 인/아웃 비율
-        const FIRST_DELAY = 0.15; // 첫 scene 시작 지연 (segment 비율 안에서)
+        const FIRST_DELAY = 0; // 첫 scene 시작 지연 (segment 비율 안에서)
         const updateScenes = (progress) => {
             const n = scenes.length;
             const segLen = 1 / n;

@@ -207,7 +207,7 @@ $(function () {
         ScrollTrigger.create({
             trigger: hero,
             start: "top top",
-            end: "50% top",
+            end: "35% top",
             scrub: 0.2,
             invalidateOnRefresh: true,
             onUpdate: (self) => {

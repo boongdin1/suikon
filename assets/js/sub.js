@@ -71,28 +71,6 @@
             });
         }
 
-        // === 인증서 라이트박스 ===
-        const certImgs = document.querySelectorAll(".cert-card img");
-        if (certImgs.length) {
-            const lb = document.createElement("div");
-            lb.className = "lightbox";
-            lb.innerHTML = '<button type="button" class="close" aria-label="닫기"><i class="ri-close-line"></i></button><img alt="">';
-            document.body.appendChild(lb);
-            const lbImg = lb.querySelector("img");
-            const close = () => lb.classList.remove("is-open");
-            lb.querySelector(".close").addEventListener("click", close);
-            lb.addEventListener("click", (e) => { if (e.target === lb) close(); });
-            document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
-            certImgs.forEach(img => {
-                img.parentElement.style.cursor = "zoom-in";
-                img.parentElement.addEventListener("click", () => {
-                    lbImg.src = img.src;
-                    lbImg.alt = img.alt;
-                    lb.classList.add("is-open");
-                });
-            });
-        }
-
         // === 폼 제출 (제휴/문의) ===
         document.querySelectorAll(".sub-form").forEach(form => {
             form.addEventListener("submit", (e) => {

@@ -3707,20 +3707,21 @@ body.sub-page { background: #05070d; color: #e7ecf5; }
   .vision-points li { font-size: 14px; line-height: 1.65; }
 }
 
-/* 인사말 페이지 — 3단 트리오 + 중앙 이미지 */
+/* 인사말 페이지 — 회사정보 3단 + 중앙 이미지 (주황 글로우) */
 .greeting-trio {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 .greeting-trio li {
-  padding: 32px 28px;
+  padding: 32px 24px;
+  text-align: center;
   background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
+  border-radius: 16px;
   transition: transform 0.4s ease, border-color 0.4s ease, background 0.4s ease;
 }
 .greeting-trio li:hover {
@@ -3728,61 +3729,59 @@ body.sub-page { background: #05070d; color: #e7ecf5; }
   border-color: rgba(255, 138, 61, 0.4);
   background: linear-gradient(180deg, rgba(255, 138, 61, 0.06) 0%, rgba(255,255,255,0.02) 100%);
 }
-.greeting-trio .icon {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 13px;
-  background: linear-gradient(135deg, rgba(255, 138, 61, 0.18) 0%, rgba(255, 138, 61, 0.04) 100%);
-  border: 1px solid rgba(255, 138, 61, 0.3);
+.greeting-trio .label {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   color: #ff9a3d;
-  font-size: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
-.greeting-trio h3 {
-  font-size: 19px;
+.greeting-trio strong {
+  display: block;
+  font-size: 20px;
   font-weight: 800;
   color: #fff;
-  margin: 0 0 10px;
   letter-spacing: -0.02em;
   word-break: keep-all;
-}
-.greeting-trio p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(231, 236, 245, 0.72);
-  word-break: keep-all;
+  line-height: 1.4;
 }
 .greeting-figure {
-  margin: 56px auto;
-  max-width: 1100px;
-  border-radius: 24px;
-  overflow: hidden;
-  background: #0b0d10;
-  border: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  margin: 64px auto 0;
+  max-width: 600px;
+  isolation: isolate;
+}
+.greeting-figure::before {
+  content: "";
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(closest-side, rgba(255, 138, 61, 0.35) 0%, rgba(255, 138, 61, 0) 75%);
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
 }
 .greeting-figure img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  border-radius: 20px;
 }
 @media (max-width: 1024px) {
-  .greeting-trio { grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .greeting-trio li { padding: 26px 22px; }
-  .greeting-trio h3 { font-size: 17px; }
-  .greeting-figure { margin: 44px auto; }
+  .greeting-trio { gap: 16px; }
+  .greeting-trio li { padding: 26px 20px; }
+  .greeting-trio strong { font-size: 18px; }
+  .greeting-figure { margin-top: 48px; max-width: 480px; }
 }
 @media (max-width: 640px) {
-  .greeting-trio { grid-template-columns: 1fr; gap: 14px; }
+  .greeting-trio { grid-template-columns: 1fr; gap: 12px; }
   .greeting-trio li { padding: 22px 20px; }
-  .greeting-trio .icon { width: 44px; height: 44px; font-size: 20px; margin-bottom: 14px; }
-  .greeting-trio h3 { font-size: 17px; }
-  .greeting-trio p { font-size: 14px; }
-  .greeting-figure { margin: 32px auto; border-radius: 16px; }
+  .greeting-trio strong { font-size: 18px; }
+  .greeting-figure { margin-top: 36px; max-width: 100%; border-radius: 16px; }
+  .greeting-figure img { border-radius: 16px; }
+  .greeting-figure::before { inset: -30px; }
 }
 
 /* 인증내역 페이지 — 그리드 + 줌 모달 */

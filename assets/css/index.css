@@ -3707,6 +3707,174 @@ body.sub-page { background: #05070d; color: #e7ecf5; }
   .vision-points li { font-size: 14px; line-height: 1.65; }
 }
 
+/* 인사말 페이지 — 3단 트리오 + 중앙 이미지 */
+.greeting-trio {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.greeting-trio li {
+  padding: 32px 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  transition: transform 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+}
+.greeting-trio li:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 138, 61, 0.4);
+  background: linear-gradient(180deg, rgba(255, 138, 61, 0.06) 0%, rgba(255,255,255,0.02) 100%);
+}
+.greeting-trio .icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, rgba(255, 138, 61, 0.18) 0%, rgba(255, 138, 61, 0.04) 100%);
+  border: 1px solid rgba(255, 138, 61, 0.3);
+  color: #ff9a3d;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.greeting-trio h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+.greeting-trio p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(231, 236, 245, 0.72);
+  word-break: keep-all;
+}
+.greeting-figure {
+  margin: 56px auto;
+  max-width: 1100px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0b0d10;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.greeting-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .greeting-trio { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .greeting-trio li { padding: 26px 22px; }
+  .greeting-trio h3 { font-size: 17px; }
+  .greeting-figure { margin: 44px auto; }
+}
+@media (max-width: 640px) {
+  .greeting-trio { grid-template-columns: 1fr; gap: 14px; }
+  .greeting-trio li { padding: 22px 20px; }
+  .greeting-trio .icon { width: 44px; height: 44px; font-size: 20px; margin-bottom: 14px; }
+  .greeting-trio h3 { font-size: 17px; }
+  .greeting-trio p { font-size: 14px; }
+  .greeting-figure { margin: 32px auto; border-radius: 16px; }
+}
+
+/* 인증내역 페이지 — 그리드 + 줌 모달 */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.cert-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+.cert-card__img {
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+}
+.cert-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+}
+.cert-card__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px 14px;
+  background: #fff;
+}
+.cert-card__logo img {
+  width: 90px;
+  height: 32px;
+  object-fit: contain;
+}
+.cert-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 122, 26, 0.28);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.cert-card:hover::before { opacity: 1; }
+.cert-card__zoom {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 54px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff6a00, #ff9a3d);
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(255, 106, 0, 0.45);
+  font-size: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 3;
+  cursor: pointer;
+}
+.cert-card:hover .cert-card__zoom {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+@media (max-width: 1024px) {
+  .cert-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
+@media (max-width: 640px) {
+  .cert-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .cert-card__zoom { width: 42px; height: 42px; font-size: 22px; opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  .cert-card__logo img { width: 70px; height: 26px; }
+}
+
 /* Contact — 통합형 4분할 리스트 */
 .contact-head {
   text-align: center;

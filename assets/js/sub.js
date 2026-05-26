@@ -146,5 +146,34 @@
             window.addEventListener("scroll", onScroll, { passive: true });
             onScroll();
         }
+
+        // === 인증서 줌 모달 (인증내역 페이지) ===
+        const certModal = document.getElementById("cert-modal");
+        if (certModal) {
+            const modalImg = certModal.querySelector(".cert-modal__img");
+            const open = (src) => {
+                if (!src) return;
+                modalImg.setAttribute("src", src);
+                certModal.classList.add("is-open");
+                certModal.setAttribute("aria-hidden", "false");
+                document.body.classList.add("cert-open");
+            };
+            const close = () => {
+                certModal.classList.remove("is-open");
+                certModal.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("cert-open");
+                modalImg.setAttribute("src", "");
+            };
+            document.querySelectorAll(".cert-card").forEach(card => {
+                card.addEventListener("click", () => {
+                    const src = card.getAttribute("data-cert") || card.querySelector(".cert-card__img img")?.getAttribute("src");
+                    open(src);
+                });
+            });
+            certModal.querySelectorAll("[data-cert-close]").forEach(el => el.addEventListener("click", close));
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && certModal.classList.contains("is-open")) close();
+            });
+        }
     });
 })();

@@ -3750,7 +3750,7 @@ body.sub-page { background: #05070d; color: #e7ecf5; }
 }
 .greeting-figure {
   position: relative;
-  margin: 64px auto 0;
+  margin: 0 auto 64px;
   max-width: 600px;
   isolation: isolate;
 }
@@ -3773,13 +3773,13 @@ body.sub-page { background: #05070d; color: #e7ecf5; }
   .greeting-trio { gap: 16px; }
   .greeting-trio li { padding: 26px 20px; }
   .greeting-trio strong { font-size: 18px; }
-  .greeting-figure { margin-top: 48px; max-width: 480px; }
+  .greeting-figure { margin: 0 auto 48px; max-width: 480px; }
 }
 @media (max-width: 640px) {
   .greeting-trio { grid-template-columns: 1fr; gap: 12px; }
   .greeting-trio li { padding: 22px 20px; }
   .greeting-trio strong { font-size: 18px; }
-  .greeting-figure { margin-top: 36px; max-width: 100%; border-radius: 16px; }
+  .greeting-figure { margin: 0 auto 36px; max-width: 100%; border-radius: 16px; }
   .greeting-figure img { border-radius: 16px; }
   .greeting-figure::before { inset: -30px; }
 }
